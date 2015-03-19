@@ -72,3 +72,15 @@ describe('curry', function() {
   });
 });
 
+/*
+ * Ex9: Without writing any new functions,
+ *      show three ways to create the inc function
+ */
+describe('inc', function() {
+  it('adds 1 to the given number', function() {
+    expect(ex.inc1(5)).to.be.eq(6);
+    expect(ex.inc2(5)).to.be.eq(6);
+    expect(ex.inc3(5)).to.be.eq(6);
+  });
+});
+
