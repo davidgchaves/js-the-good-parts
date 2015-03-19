@@ -84,3 +84,14 @@ describe('inc', function() {
   });
 });
 
+/*
+ * Ex10: Write methodize, a function that converts
+ *       a binary function to a method
+ */
+describe('methodize', function() {
+  it('converts a binary function to a method', function() {
+    Number.prototype.add = ex.methodize(ex.add);
+    expect((3).add(4)).to.be.equal(7);
+  });
+});
+
