@@ -95,3 +95,13 @@ describe('methodize', function() {
   });
 });
 
+/*
+ * Ex11: Write demethodize, a function that converts
+ *       a method to a binary function
+ */
+describe('demethodize', function() {
+  it('converts a method to a binary function', function() {
+    expect(ex.demethodize(Number.prototype.add)(5,6)).to.be.equal(11);
+  });
+});
+
