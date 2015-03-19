@@ -31,3 +31,13 @@ describe('mul', function() {
   });
 });
 
+/*
+ * Ex5: Write a function identityf that takes an argument
+ *      and returns a function that returns that argument
+ */
+describe('identityf', function() {
+  it('returns a function that returns the given argument', function() {
+    expect(ex.identityf(3)()).to.be.equal(3);
+  });
+});
+
