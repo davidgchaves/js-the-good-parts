@@ -41,3 +41,12 @@ describe('identityf', function() {
   });
 });
 
+/*
+ * Ex6: Write a function that adds from two invocations
+ */
+describe('addf', function() {
+  it('adds two numbers one at a time (curry)', function() {
+    expect(ex.addf(3)(4)).to.be.equal(7);
+  });
+});
+
