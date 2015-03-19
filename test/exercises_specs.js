@@ -25,3 +25,9 @@ describe('add', function() {
   });
 });
 
+describe('mul', function() {
+  it('returns the product of two numbers', function() {
+    expect(ex.mul(3,4)).to.be.equal(12);
+  });
+});
+
