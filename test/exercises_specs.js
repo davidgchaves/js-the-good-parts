@@ -50,3 +50,14 @@ describe('addf', function() {
   });
 });
 
+/*
+ * Ex7: Write a function that takes a binary function
+ *      and make it callable with two invocations
+ */
+describe('applyf', function() {
+  it('curries the given binary function', function() {
+    expect(ex.applyf(ex.add)(3)(4)).to.be.equal(7);
+    expect(ex.applyf(ex.mul)(5)(6)).to.be.equal(30);
+  });
+});
+
