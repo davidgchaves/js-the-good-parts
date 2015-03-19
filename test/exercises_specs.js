@@ -61,3 +61,14 @@ describe('applyf', function() {
   });
 });
 
+/*
+ * Ex8: Write a function that takes a function and an argument
+ *      and returns a function that can supply a 2nd argument
+ */
+describe('curry', function() {
+  it('partially applies the given function to the given argument', function() {
+    expect(ex.curry(ex.add, 3)(4)).to.be.equal(7);
+    expect(ex.curry(ex.mul, 5)(6)).to.be.equal(30);
+  });
+});
+
