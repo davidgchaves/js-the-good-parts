@@ -1,0 +1,15 @@
+{
+  "name": "js-the-good-parts",
+  "version": "0.0.1",
+  "description": "Exercises for Javascript The Good Parts Lectures",
+  "main": "",
+  "scripts": {
+    "test": "mocha -u bdd -R spec -t 500 --recursive"
+  },
+  "author": "David G. Chaves <davidgchaves@gmail.com>",
+  "license": "",
+  "devDependencies": {
+    "chai": "^2.1.1",
+    "mocha": "^2.1.0"
+  }
+}
