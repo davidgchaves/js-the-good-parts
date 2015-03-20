@@ -139,3 +139,19 @@ describe('composeb', function() {
   });
 });
 
+/*
+ * Ex15: Write once, a function that allows another function
+ *       to only be called once
+ *       NOTE: the second time (checked in node repl) it throws a
+ *             TypeError: Cannot read property 'apply' of null
+ *             But, sadly, I'm unable to capture it in the example below
+ *             when using Chai's throw
+ */
+describe('once', function() {
+  it('only allows the given function to be called once', function() {
+    var add_once = ex.once(ex.add);
+    expect(add_once(3,4)).to.be.equal(7);
+    //expect(add_once(3,4)).to.throw(TypeError);
+  });
+});
+
