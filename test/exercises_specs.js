@@ -105,3 +105,15 @@ describe('demethodize', function() {
   });
 });
 
+
+/*
+ * Ex12: Write twice, a function that takes a binary function and returns
+ *       a unary function that passes its args to the binary function twice
+ */
+describe('twice', function() {
+  it('executes the given binary function with the same argument', function() {
+    expect(ex.twice(ex.add)(11)).to.be.equal(22);
+    expect(ex.twice(ex.mul)(11)).to.be.equal(121);
+  });
+});
+
