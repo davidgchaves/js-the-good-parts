@@ -155,3 +155,16 @@ describe('once', function() {
   });
 });
 
+/*
+ * Ex16: Write counterf, a function that returns two functions
+ *       that implement an up/down counter
+ */
+describe('counterf', function() {
+  it('creates an object with inc/dec functions', function() {
+    var counter = ex.counterf(10);
+    expect(counter.inc()).to.be.equal(11);
+    expect(counter.dec()).to.be.equal(10);
+    expect(counter.dec()).to.be.equal(9);
+  });
+});
+
