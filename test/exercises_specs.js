@@ -129,3 +129,13 @@ describe('composeu', function() {
   });
 });
 
+/*
+ * Ex14: Write composeb, a function that takes two binary functions
+ *       and returns a function that calls them both
+ */
+describe('composeb', function() {
+  it('composes two binary functions', function() {
+    expect(ex.composeb(ex.add,ex.mul)(2,3,6)).to.be.equal(30);
+  });
+});
+
