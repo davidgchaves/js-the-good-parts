@@ -117,3 +117,15 @@ describe('twice', function() {
   });
 });
 
+/*
+ * Ex13: Write composeu, a function that takes two unary functions
+ *       and returns a unary function that calls them both
+ */
+describe('composeu', function() {
+  it('composes two unary functions', function() {
+    var double = ex.twice(ex.add);
+    var square = ex.twice(ex.mul);
+    expect(ex.composeu(double,square)(3)).to.be.equal(36);
+  });
+});
+
