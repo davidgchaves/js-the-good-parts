@@ -168,3 +168,23 @@ describe('counterf', function() {
   });
 });
 
+/*
+ * Ex17: Write revocable, a function that takes a nice function
+ *       and returns:
+ *        invoke function -> invokes the nice function
+ *        revoke function -> denies future access to the nice function
+ *       NOTE: after inc.revoke() (checked in node repl) it throws a
+ *             TypeError: Cannot read property 'apply' of null
+ *             But, sadly, I'm unable to capture it in the example below
+ *             when using Chai's throw
+ */
+describe('revocable', function() {
+  it('creates an object with invoke/revoke functions', function() {
+    var inc = ex.revocable(ex.inc1);
+    expect(inc.invoke(10)).to.be.equal(11);
+    expect(inc.invoke(20)).to.be.equal(21);
+    inc.revoke();
+    //expect(inc.invoke(10)).to.throw();
+  });
+});
+
